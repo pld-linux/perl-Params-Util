@@ -6,7 +6,7 @@
 %define	pdir	Params
 %define	pnam	Util
 Summary:	Params::Util - Simple standalone param-checking functions
-Summary(pl.UTF-8):   Params::Util - proste samodzielne funkcje do sprawdzania parametrów
+Summary(pl.UTF-8):	Params::Util - proste samodzielne funkcje do sprawdzania parametrów
 Name:		perl-Params-Util
 Version:	0.22
 Release:	1
