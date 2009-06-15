@@ -8,13 +8,13 @@
 Summary:	Params::Util - Simple standalone param-checking functions
 Summary(pl.UTF-8):	Params::Util - proste samodzielne funkcje do sprawdzania parametrów
 Name:		perl-Params-Util
-Version:	0.31
+Version:	1.00
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	985370df207e331ac8ad9976255f0fd3
+# Source0-md5:	827ba4b8bed00e718cea60321129be41
 URL:		http://search.cpan.org/dist/Params-Util/
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.80
@@ -62,5 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/Params/Util.pm
+%{perl_vendorarch}/Params/Util.pm
+%{perl_vendorarch}/auto/Params/Util/Util.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Params/Util/Util.so
 %{_mandir}/man3/*
