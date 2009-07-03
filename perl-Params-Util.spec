@@ -9,7 +9,7 @@ Summary:	Params::Util - Simple standalone param-checking functions
 Summary(pl.UTF-8):	Params::Util - proste samodzielne funkcje do sprawdzania parametrów
 Name:		perl-Params-Util
 Version:	1.00
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -22,7 +22,6 @@ BuildRequires:	perl-Test-Simple >= 0.42
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
