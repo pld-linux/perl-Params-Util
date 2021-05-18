@@ -7,20 +7,22 @@
 Summary:	Params::Util - Simple standalone param-checking functions
 Summary(pl.UTF-8):	Params::Util - proste samodzielne funkcje do sprawdzania parametrów
 Name:		perl-Params-Util
-Version:	1.07
-Release:	12
+Version:	1.102
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	02db120c0eef87aae1830cc62bdec37b
+# Source0-md5:	f1aa70ba570f03f14cd394096b9c6883
 URL:		https://metacpan.org/release/Params-Util
 BuildRequires:	perl-ExtUtils-CBuilder >= 0.27
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.80
-BuildRequires:	perl(Scalar::Util) >= 1.18
-BuildRequires:	perl-Test-Simple >= 0.42
+BuildRequires:	perl-Scalar-List-Utils >= 1.18
+BuildRequires:	perl-Storable
+BuildRequires:	perl-Test-LeakTrace
+BuildRequires:	perl-Test-Simple >= 0.96
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -63,7 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes LICENSE README.md
 %{perl_vendorarch}/Params/Util.pm
+%dir %{perl_vendorarch}/Params/Util
+%{perl_vendorarch}/Params/Util/PP.pm
 %attr(755,root,root) %{perl_vendorarch}/auto/Params/Util/Util.so
 %{_mandir}/man3/Params::Util.3pm*
+%{_mandir}/man3/Params::Util::PP.3pm*
