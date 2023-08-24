@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define	pdir	Params
 %define	pnam	Util
@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f1aa70ba570f03f14cd394096b9c6883
-URL:		https://metacpan.org/release/Params-Util
+URL:		https://metacpan.org/dist/Params-Util
 BuildRequires:	perl-ExtUtils-CBuilder >= 0.27
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 %if %{with tests}
